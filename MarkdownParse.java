@@ -23,7 +23,10 @@ public class MarkdownParse {
                 currentIndex = closeParen + 1;
                 continue;
             }
-            
+            if (!markdown.substring(closeBracket + 1, closeBracket + 2).equals("(")){
+                currentIndex = closeParen + 1;
+                continue;
+            }
             if (openBracket == -1 || closeBracket == -1 || openParen == -1 || closeParen == -1) {
                 break;
             }
