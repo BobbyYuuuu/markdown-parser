@@ -19,7 +19,7 @@ public class MarkdownParse {
             if (closeParen < markdown.length() - 1 && markdown.substring(closeParen + 1).equals(")")) {
                 closeParen++;
             }
-            if (markdown.substring(openBracket - 1, openBracket).equals("!")){
+            if ((openBracket - 1) > -1 && markdown.substring(openBracket - 1, openBracket).equals("!")){
                 currentIndex = closeParen + 1;
                 continue;
             }
