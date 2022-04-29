@@ -107,5 +107,12 @@ public class MarkdownParseTest {
         String content = Files.readString(fileName);
         assertEquals(answer, MarkdownParse.getLinks(content));
     }
+    @Test
+    public void testGetLinksNewFile9() throws IOException {
+        List<String> answer = List.of("Google.com");
+        Path fileName = Path.of("test-file9.md");
+        String content = Files.readString(fileName);
+        assertEquals(answer, MarkdownParse.getLinks(content));
+    }
 
 }
