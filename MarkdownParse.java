@@ -19,7 +19,6 @@ public class MarkdownParse {
             if (openBracket == -1 || closeBracket == -1 || openParen == -1 || closeParen == -1) {
                 break;
             }
-<<<<<<< HEAD
             if ((openBracket - 1) > -1 && markdown.substring(openBracket - 1, openBracket).equals("!")) {
                 currentIndex = closeParen + 1;
                 continue;
@@ -33,20 +32,6 @@ public class MarkdownParse {
                 closeParen++;
             }
 
-=======
-            if (closeParen < markdown.length() - 1 && markdown.substring(closeParen + 1).equals(")")) {
-                closeParen++;
-            }
-            if ((openBracket - 1) > -1 && markdown.substring(openBracket - 1, openBracket).equals("!")){
-                currentIndex = closeParen + 1;
-                continue;
-            }
-            if (!markdown.substring(closeBracket + 1, closeBracket + 2).equals("(")){
-                currentIndex = closeParen + 1;
-                continue;
-            }
-            
->>>>>>> 3b07614aee0f4954931f380df499d3e589a86361
             toReturn.add(markdown.substring(openParen + 1, closeParen));
             currentIndex = closeParen + 1;
         }
