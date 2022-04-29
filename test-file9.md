@@ -1,1 +1,1 @@
-[Google.com] (Google.com)
+[Google.com](Google(wee).com)

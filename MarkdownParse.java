@@ -23,6 +23,12 @@ public class MarkdownParse {
                 currentIndex = closeParen + 1;
                 continue;
             }
+
+            if (markdown.substring(openParen + 1, closeParen).contains("(")){
+                if (closeParen + 1 < markdown.length() - 1){
+                    closeParen = markdown.indexOf(")", closeParen + 1);
+                }
+            }
             if (!markdown.substring(closeBracket + 1, closeBracket + 2).equals("(")) {
                 currentIndex = closeParen + 1;
                 continue;
