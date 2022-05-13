@@ -1,0 +1,62 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>League Displays</title>
+      <link rel="stylesheet" href="error.css">
+      <script type="text/javascript">
+          function getParameterByName(name) {
+            const url = unescapeHtml(document.URL);
+            console.log(url);
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
+            var results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+          }
+
+          function unescapeHtml(safe) {
+              return safe.replace(/&amp;/g, '&')
+                  .replace(/&lt;/g, '<')
+                  .replace(/&gt;/g, '>')
+                  .replace(/&quot;/g, '"')
+                  .replace(/&#039;/g, "'");
+          }
+
+          function openUrl() {
+              window.LolScreenSaverOpenUrl('http://www.surveygizmo.com/s3/4014976/league-displays-feedback-survey');
+          }
+
+      </script>
+</head>
+<body>
+<div class='outer'>
+    <div class='inner'>
+        <script>
+            var message = getParameterByName('message');
+            document.write(message);
+        </script>
+        <br>
+        <br>
+        <script>
+            var linkMessage = getParameterByName('linkMessage');
+            var errorCode = getParameterByName('errorCode');
+            if (errorCode)
+            {
+                if (linkMessage)
+                {
+                    document.write(
+                        '<div class="clickable-link" onclick="openUrl();"">' +
+                        linkMessage +
+                        '</div>');
+                }
+                document.write(
+                    '<div class="errorCode">' +
+                    errorCode +
+                    '</div>');
+            }
+        </script>
+    </div>
+</div>
+</body>
+</html>
