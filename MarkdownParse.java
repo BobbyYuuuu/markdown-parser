@@ -29,6 +29,7 @@ public class MarkdownParse {
                     closeParen = markdown.indexOf(")", closeParen + 1);
                 }
             }
+            
             if (!markdown.substring(closeBracket + 1, closeBracket + 2).equals("(")) {
                 currentIndex = closeParen + 1;
                 continue;
