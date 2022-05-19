@@ -1,0 +1,45 @@
+@font-face{
+    font-family:"Beaufort for LOL";
+    src:url('fonts/BeaufortforLOL-Medium.woff') format('woff');
+    font-weight:500;
+    font-style:normal;
+}
+
+body {
+	font-family:"Beaufort for LOL";
+	font-weight:700;
+	font-style:normal;
+  	background-color: #010a13;
+	color: #cdbe91;
+	letter-spacing: 2.5px;
+}
+
+div.outer {
+	width: 100%;
+	height: 100%;
+	display: table;
+}
+
+div.inner {
+	font-size: 2.5em;
+	text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+div.errorCode {
+	opacity: 0.5;
+	font-size: 0.5em;
+}
+
+div.clickable-link {
+	z-index: 10;
+	font-size: 0.5em;
+}
+
+div.clickable-link:hover {
+    cursor: hand;
+    cursor: pointer;
+    opacity: .9;
+}
+
